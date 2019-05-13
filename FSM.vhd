@@ -21,10 +21,10 @@ clock <= KEY0;
 PROCESS (w, y_Q) -- state table
 BEGIN
 CASE y_Q IS
-	WHEN 	A => IF (w = '0') THEN Y_D <= C; 
+	WHEN 	A => IF (w = '0') THEN Y_D <= B; 
 			ELSE Y_D <= F;
 			END IF;
-	WHEN	B => IF (w = '0') THEN Y_D <= B;
+	WHEN	B => IF (w = '0') THEN Y_D <= C;
 			ELSE Y_D <= F;
 			END IF;
 	WHEN	C => IF (w = '0') THEN Y_D <= D;
@@ -60,6 +60,6 @@ BEGIN
 	end if;
 END PROCESS;
 
-LEDR0 <= '1' when (y_q=E or y_q=I) else
+LEDR0 <= '1' when ((y_q=E) or (y_q=I)) else
 	 '0';
 END Behavior;
