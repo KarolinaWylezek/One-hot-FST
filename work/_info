@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Efsm
+Z0 w1557769855
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dD:/Dokumenty/DSE/FSM
+Z4 8D:\Dokumenty\DSE\FSM\FSM.vhd
+Z5 FD:\Dokumenty\DSE\FSM\FSM.vhd
+l0
+L4
+VUel<NiQ1kn^?XLkinaZVR2
+!s100 C[A]:cgzR<AnjFbA>Ri?K2
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1557769859
+!i10b 1
+Z8 !s108 1557769859.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\Dokumenty\DSE\FSM\FSM.vhd|
+Z10 !s107 D:\Dokumenty\DSE\FSM\FSM.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+Z13 DEx4 work 3 fsm 0 22 Uel<NiQ1kn^?XLkinaZVR2
+l16
+L11
+VYVN1KNZj>XZQ>bjX0:EzH1
+!s100 WFRdVLO?55G;;Jn19zjJ70
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
