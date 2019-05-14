@@ -3,20 +3,21 @@ USE ieee.std_logic_1164.all;
 
 ENTITY FSM IS
 PORT(	SW : in std_logic_vector(1 downto 0);
-	KEY0 : in std_logic; --ask about names
-	LEDR0 : out std_logic -- -||-
+	KEY : in std_logic_vector(3 downto 0);
+	LEDR : out std_logic_vector(9 downto 0) 
 	);
 END FSM;
 
 ARCHITECTURE Behavior OF FSM IS
-signal w, clock, reset : std_logic;
+signal w, clock, reset, output : std_logic;
 TYPE State_type IS (A, B, C, D, E, F, G, H, I);
 SIGNAL y_Q, Y_D : State_type; -- y_Q is present state, y_D is next state
 
 BEGIN
 w <= SW(1);
 reset <= SW(0);
-clock <= KEY0;
+clock <= KEY(0);
+--output<=LEDR(0);
 
 PROCESS (w, y_Q) -- state table
 BEGIN
@@ -60,6 +61,6 @@ BEGIN
 	end if;
 END PROCESS;
 
-LEDR0 <= '1' when ((y_q=E) or (y_q=I)) else
+ LEDR(0) <= '1' when ((y_q=E) or (y_q=I)) else
 	 '0';
 END Behavior;

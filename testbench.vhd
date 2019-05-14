@@ -7,25 +7,27 @@ END testbench;
 ARCHITECTURE Behavior OF testbench IS
 COMPONENT FSM is 
          port(	SW : in std_logic_vector(1 downto 0);
-		KEY0 : in std_logic; 
-		LEDR0 : out std_logic);
+		KEY : in std_logic_vector(3 downto 0);
+		LEDR : out std_logic_vector(9 downto 0));
 END COMPONENT;
 
 SIGNAL wx : STD_LOGIC;
 SIGNAL clk   : STD_LOGIC;
 SIGNAL resetx  : STD_LOGIC; 
-SIGNAL zx : STD_LOGIC;
 SIGNAL m : STD_LOGIC_VECTOR(1 downto 0);
+signal o1 : std_logic_vector(3 downto 0);
+signal o2 : std_logic_vector(9 downto 0);
 
 BEGIN
 m<=wx & resetx;
+o1<= "000" & clk;
 
 process
    begin
         clk <= '0';
-        wait for 10 ns;  --for 0.5 ns signal is '0'.
+        wait for 10 ns; 
         clk <= '1';
-        wait for 10 ns;  --for next 0.5 ns signal is '1'.
+        wait for 10 ns; 
    end process;
 
 PROCESS
@@ -75,6 +77,6 @@ WAIT FOR 20 ns;
 WAIT;
 
 END PROCESS;
-FIG: FSM PORT MAP (m, clk, zx);
+FIG: FSM PORT MAP (m, o1, o2);
 END Behavior;
 
